@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm> // for std::min
+
+using namespace std;
+
+int main() {
+    int N; // distance
+    int A; // speed on foot
+    int B; // speed on bike
+
+    // Read input values
+    cin >> N >> A >> B;
+
+    // Calculate time taken for both modes of transport
+    double time_by_foot = static_cast<double>(N) / A;
+    double time_by_bike = static_cast<double>(N) / B;
+
+    // Find the minimum time
+    double min_time = min(time_by_foot, time_by_bike);
+
+    // Print the result
+    cout << min_time << endl;
+
+    return 0;
+}
